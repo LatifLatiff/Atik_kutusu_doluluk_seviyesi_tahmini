@@ -105,8 +105,9 @@ knn.fit(X_train_scaled, y_train)
 acc_knn = accuracy_score(y_test, knn.predict(X_test_scaled))
 
 #  SONUÇ RAPORU
-print(f"\n🏆 --- MODEL KARŞILAŞTIRMA SONUÇLARI --- 🏆")
+print(f"\n --- MODEL KARŞILAŞTIRMA SONUÇLARI --- ")
 print(f"1. Random Forest Doğruluk Oranı : %{acc_rf*100:.2f}")
 print(f"2. Gradient Boosting Doğruluk   : %{acc_gb*100:.2f}")
 print(f"3. KNN (K-En Yakın Komşu)       : %{acc_knn*100:.2f}")
+
 
