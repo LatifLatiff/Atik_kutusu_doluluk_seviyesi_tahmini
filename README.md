@@ -52,6 +52,7 @@ Veri setini derinlemesine anlamak için genişletilmiş grafiksel analizler yap�
 **Korelasyon Matrisi:** Sensör okumaları (FL_B, FL_A) ve batarya/voltaj durumları arasındaki ilişkiler haritalandırıldı.
 
 ---
+
 ## Ön İşleme Adımları:
 * **Eksik Veri:** Sayısal boşluklar ortalama değer ile dolduruldu.
 * **Encoding:** Kategorik veriler Label Encoding ile sayısallaştırıldı.
