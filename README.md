@@ -45,10 +45,13 @@ Kolonlar:
 Veri setini derinlemesine anlamak için genişletilmiş grafiksel analizler yapılmıştır:
 
 **Sınıf Dağılımı:** "Boşalt" (Emptying) ve "Boşaltma" (Non-Emptying) etiketlerinin veri setindeki dengesi incelendi.
+
 **Doluluk Histogramı:** `FL_B` değişkeninin dağılımı incelenerek genel doluluk eşikleri belirlendi.
+
 **Kutu Grafikleri :**
   * *Konteyner Bazlı:* Her bir konteyner tasarımının doluluk varyansı ve aykırı değerleri tespit edildi.
   * *Atık Türü Bazlı:* Farklı atık yoğunluklarının sensör verilerine etkisi görselleştirildi.
+
 **Korelasyon Matrisi:** Sensör okumaları (FL_B, FL_A) ve batarya/voltaj durumları arasındaki ilişkiler haritalandırıldı.
 
 ---
