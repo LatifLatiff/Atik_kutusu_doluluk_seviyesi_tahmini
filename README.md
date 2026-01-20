@@ -10,13 +10,13 @@ Bu proje, atık yönetimi operasyonlarını optimize etmek amacıyla akıllı ç
 Veri seti, akıllı çöp kutularından alınan aşağıdaki öznitelikleri içerir:
 
 Kolonlar:
+* **`FL_B`**: Boşaltma işlemi öncesindeki doluluk seviyesi (Hedef analiz değişkeni).
+* **`FL_A`**: Boşaltma işlemi sonrasındaki doluluk seviyesi.
+* **`Container Type`**: Konteynerin fiziksel yapısı (Örn: Silvertop, Cubic).
+* **`Recyclable fraction`**: Toplanan atığın türü (Cam, Karışık vb.).
+* **`Class`**: Hedef Değişken (Emptying / Non Emptying).
 
-FL_B: Doluluk oranı (sonra)
-FL_A: Doluluk oranı (önce)
-VS: Görsel skor
-Container Type: Konteyner türü
-Recyclable fraction: Atık türü
-Class: Boşaltma durumu (Emptying / Non Emptying)
+
 ---
 
 ## Veri Analizi
@@ -59,8 +59,23 @@ Konteynerin boşaltılma durumunu tahmin etmek için 3 farklı Makine Öğrenmes
 
 ---
 ## Grafikler
+### Pivot analizi ısı haritası
+![Pivot Analizi Isı Haritası](figure_1.png)
 
+###  Hedef Değişken Dağılımı
+![Hedef Değişken Dağılımı](figure_2.png)
 
+###  Doluluk Seviyesi Dağılımı
+![Doluluk Seviyesi Dağılımı](figure_3.png)
+
+###  Konteyner Tipine Göre Doluluk
+![Konteyner Tipine Göre Doluluk](figure_4.png)
+
+###  Atık Türüne Göre Doluluk 
+![Atık Türüne Göre Doluluk ](figure_5.png)
+
+###  Korelasyon Matrisi 
+![Korelasyon Matrisi ](figure_6.png)
 
 ##  Kurulum ve Çalıştırma
 1.  **Repoyu klonlayın:**
