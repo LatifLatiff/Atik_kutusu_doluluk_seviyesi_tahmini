@@ -11,14 +11,12 @@ Veri seti, akıllı çöp kutularından alınan aşağıdaki öznitelikleri içe
 
 Kolonlar:
 
-**Class:** Boşaltma durumu (Emptying / Non-Emptying) — Hedef Değişken (y)
-**FL_B:** Güncel doluluk oranı (B Sensörü)
-**FL_A:** Güncel doluluk oranı (A Sensörü)
-**VS:** Hacimsel sensör verisi
-**FL_B_3:** 3 saat önceki doluluk verisi
-**FL_B_12:** 12 saat önceki doluluk verisi
-**Container Type:** Konteynerin yapısal tipi (Cubic, Diamond, vb.)
-**Recyclable fraction:** Atık türü (Mixed, Recyclable, vb.).
+FL_B: Doluluk oranı (sonra)
+FL_A: Doluluk oranı (önce)
+VS: Görsel skor
+Container Type: Konteyner türü
+Recyclable fraction: Atık türü
+Class: Boşaltma durumu (Emptying / Non Emptying)
 ---
 
 ## Veri Analizi
@@ -67,7 +65,7 @@ Konteynerin boşaltılma durumunu tahmin etmek için 3 farklı Makine Öğrenmes
 ##  Kurulum ve Çalıştırma
 1.  **Repoyu klonlayın:**
     ```bash
-    git clone [https://github.com/kullaniciadiniz/akilli-cop-analizi.git](https://github.com/kullaniciadiniz/akilli-cop-analizi.git)
+    git clone [[https://github.com/kullaniciadiniz/akilli-cop-analizi.git](https://github.com/kullaniciadiniz/akilli-cop-analizi.git)](https://github.com/LatifLatiff/Atik_kutusu_doluluk_seviyesi_tahmini.git)
     ```
 2.  **Gerekli kütüphaneleri yükleyin:**
     ```bash
