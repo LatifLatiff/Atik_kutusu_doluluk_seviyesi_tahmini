@@ -1,3 +1,15 @@
+LATIF LATIF 
+22360859036
+
+---
+
+# Sertifikalar
+![Makine Öğrenmesi](makine.jpg)
+![Python Proglamlama](python.jpg)
+
+
+
+
 #  Akıllı Çöp Konteyneri: Atık Yönetimi Analizi ve Tahminlemesi
 
 
