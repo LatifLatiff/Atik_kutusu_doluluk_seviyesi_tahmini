@@ -14,11 +14,11 @@ LATIF LATIF
 
 
 ##  Proje Hakkında
-Bu proje, atık yönetimi operasyonlarını optimize etmek amacıyla akıllı çöp konteynerlerinden gelen IoT sensör verilerini analiz eder. Konteynerlerin doluluk oranlarını (`FL_B`), atık türlerini ve fiziksel yapılarını inceleyerek operasyonel içgörüler sunar ve bir konteynerin boşaltılması gerekip gerekmediğini tahminleyen bir Makine Öğrenmesi modeli geliştirir.
+Bu proje, atık yönetimi süreçlerini optimize etmek amacıyla akıllı çöp konteynerlerinden gelen IoT sensör verilerini analiz eder. Konteynerlerin doluluk oranlarını (`FL_B`), atık türlerini ve fiziksel yapılarını inceleyerek tahminler yapar ve bir konteynerin boşaltılması gerekip gerekmediğini tahminleyen bir Makine Öğrenmesi modeli geliştirir.
 
 ---
 
-##  Veri Seti Açıklaması
+##  Veri Seti Açıklmaası
 Veri seti, akıllı çöp kutularından alınan aşağıdaki öznitelikleri içerir:
 
 Kolonlar:
@@ -36,13 +36,13 @@ Kolonlar:
  Bu analiz, hangi konteyner tipinin hangi atık türüyle ne kadar sürede/seviyede dolduğunu ortaya koyar.Hedef değişkenimiz olan konteynerin boşaltılmalı/boşaltılmamalı 
  olayını mantığını anlamak ve hangi tür konteynerlerin hangi tür atıklarla daha çabuk dolma riskinin bulunduğunu anlamak için çok önemlidir.
 
-**Metodoloji:**
+**Yöntem:**
 - **Satırlar:** Konteyner Tipi (Örn: Diamond, Cubic, Accordion)
 - **Sütunlar:** Atık Türü (Mixed, Recyclable, Non-Recyclable)
 - **Değerler:** Boşaltma Öncesi Ortalama Doluluk Seviyesi (`FL_B`)
 
 
-Veri setini derinlemesine anlamak için genişletilmiş grafiksel analizler yapılmıştır:
+Veri setini  anlamak için grafiksel analizler yapılmıştır:
 
 **Sınıf Dağılımı:** "Boşalt" (Emptying) ve "Boşaltma" (Non-Emptying) etiketlerinin veri setindeki dengesi incelendi.
 
@@ -62,16 +62,19 @@ Veri setini derinlemesine anlamak için genişletilmiş grafiksel analizler yap�
 * **Normalizasyon(Scaling):** Özellikle **KNN** algoritması için veriler `StandardScaler` ile normalize edildi.
 ---
 ##  Model Karşılaştırması ve Sonuçlar
-Konteynerin boşaltılma durumunu tahmin etmek için 3 farklı Makine Öğrenmesi algoritması eğitilmiş ve kıyaslanmıştır.
+Konteynerin boşaltılma durumunu tahmin etmek için 3 farklı Makine Öğrenmesi algoritması eğitilmiş ve karşılaştırılmıştır.
 
 
 ###  Performans Liderlik Tablosu
 
-| Sıra | Model | Doğruluk (Accuracy) | Notlar |
-|------|-------|---------------------|--------|
-| 1 | **Random Forest** | **%96.01** | En iyi performansı gösterdi. Gürültülü verilerde ve karmaşık ilişkilerde çok başarılı. |
-| 2 | Gradient Boosting | %91.70 | Güçlü bir model ancak Random Forest'a göre hafif bir aşırı öğrenme (overfitting) eğilimi var. |
-| 3 | KNN (K-En Yakın Komşu) | %90.41 | İyi bir taban (baseline) skoru verdi, ancak yüksek başarı için veri normalizasyonu şart. |
+| Sıra | Model | Doğruluk (Accuracy) |
+|------|-------|---------------------|
+| 1 | **Random Forest** | **%96.01** |
+| 2 | KNN (K En Yakın Komşu)| %90.41 | 
+| 3 | Logistic Regression | %88.47 | 
+
+Bu sonuçlar göre en başarı model Random Forest modeli olmuştur. Karmaşık ilişkileri anlamakta etkili bir modeldir,Logistic Regression modeli güzel bir baseline olmasına rağmen performansı düşük kalmıştr
+KNN modeli iyi performans göstermesinde yaptığımız normalizasyon işlemi önemli rol oynamıştır.
 
 ---
 ## Grafikler
